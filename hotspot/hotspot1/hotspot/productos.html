@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Configurar Mikrotik Wireless - Servicios</title>
+<link href="estilos.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.tres {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 30px;
+	color: #278DB3;
+}
+.cinco {
+	color: #8F9194;
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 36px;
+}
+.cuatro {
+	color: #5FE050;
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 30px;
+}
+.dos {font-size: 17.24px;
+	color: #808285;
+	line-height: 20px;
+}
+.seis {color: #00719B;
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 28.36px;
+}
+.tres1 {
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 36px;
+	color: #278DB3;
+}
+.uno {
+	color: #00719B;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 50px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+}
+.PRINCIPAL {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000;
+}
+#apDiv1 {
+	position: absolute;
+	width: 1050px;
+	height: 42px;
+	z-index: 1;
+	left: -1px;
+	background-color: #5FE050;
+	top: 8px;
+}
+</style>
+</head>
+
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+<div id="geral">
+
+<div id="topo">
+
+<div id="logo"></div>
+
+<div id="fone"></div>
+
+</div>
+
+<div id="conteudo">
+<div id="esq">
+  $(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>
+  <p>$(endif)</p>
+  <div id="apDiv1"><span class="cuatro"><a href="login.html" class="cuatro"><strong>&lt;&lt;</strong></a></span><span class="azul"><span class="NUEVO"><a href="login.html" class="NUEVO"><strong>PRINCIPAL</strong></a></span> <strong><span class="cuatro">&lt;&lt;</span><a href="productos.html" class="NUEVO">PRODUCTOS Y SERVICIOS</a></strong> <strong><span class="cuatro">&lt;&lt;</span></strong><a href="contactos.html" class="NUEVO"><strong>CONTACTOS</strong></a><span class="cuatro">&lt;&lt;</span></span><span class="NUEVO"><strong><a href="puntos.html" class="NUEVO">PUNTOS DE VENTA</a></strong></span></div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><strong><span class="azul"><img src="images/banner3.png" width="945" height="164" alt="LOGO" /><span class="uno"><strong><span class="align-center"><img src="images/LogoFacebook.png" alt="" width="400" height="130" align="right" /></span></strong></span></span></strong></p>
+  <p>&nbsp;</p>
+  <p><span class="ESPACIOS">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><span class="tres1">Activa tu pin </span><span class="PRINCIPAL">aquì.</span>
+    <input type="hidden" name="dst" value="$(link-orig)">	
+      	<input type="hidden" name="popup" value="true">
+</p>
+<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+		<p>				
+				<label><span class="ESPACIOS"><strong>&lt;</strong></span><strong>USUARIO:</strong></label>
+				<input name="username" value="$(username)" type="text" size="10" />
+				<label><span class="ESPACIOS"><strong>&lt;</strong></span><strong>CONTRASEÑA:</strong></label>
+				<input name="password" value="" type="password" size="10" />
+		</p>
+		<p class="align-center">
+    <input class="seis" type="submit" value="&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Acceder &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;"/>
+		</p>
+</form>
+</div>	
+<div id="dir"> 
+<h1 align="left" class="azul">&nbsp;</h1>
+<p align="center"><span class="uno"><strong>PRODUCTOS Y SERVICIOS.</strong></span></p>
+<p align="center"><span class="seis">ESTOS SON NUESTROS PLANES DE INTERNET.</span></p>
+<p align="center" class="cuatro">12 HORAS </p>
+<p align="center" class="cuatro"><img src="images/banner.jpg" width="500" height="300" /></p>
+<p align="center"><span class="uno"><br />
+</span></p>
+<p class="button">&nbsp;</p>  
+<p>&nbsp;</p>
+</div>
+
+</div>
+<div id="clear"></div>
+<div id="fundo">
+	<p align="center">&copy; 2011 ConfigurarMikrotikWireless- Todos los derechos reservados.</p>
+</div>
+
+</div>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>

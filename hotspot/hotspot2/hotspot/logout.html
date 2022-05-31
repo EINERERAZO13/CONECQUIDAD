@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<head>
+
+<link rel="stylesheet" href="images/screen.css" type="text/css" />
+
+<title>Rony Net</title>
+	
+</head>
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+<body>
+<!-- wrap starts here -->
+<div id="wrap">
+	
+  <div id="header"> 
+    <h1 id="logo">Rony<span class="green">Net</span></h1>
+    <h2 id="slogan">conectando você, ao mundo...</h2>
+    <!-- Menu Tabs -->
+    <ul>
+      <li id="current"><a href="login.html"><span>Login</span></a></li>
+      <li><a href="planos.html"><span>Planos</span></a></li>
+      <li><a href="cadastro.html"><span>Cadastro Cliente</span></a></li>
+      <li><a href="status.html"><span>Status da Conexão</span></a></li>
+    </ul>
+  </div>	
+				
+	<!-- content-wrap starts here -->
+	<div id="content-wrap">		
+											
+	<img src="images/headerphoto.jpg" width="820" height="120" alt="headerphoto" class="no-border" />
+		
+		<div id="sidebar" >							
+				
+			<h1>Menu</h1>
+			<ul class="sidemenu">
+				<li><a href="login.html">Login</a></li>
+				<li><a href="planos.html">Planos</a></li>					
+				<li><a href="cadastro.html">Cadastro Cliente</a></li>	
+                        <li><a href="status.html">Status da Conexão</a></li>					
+			</ul>			
+				
+		
+			<h1>Novidades</h1>
+			<ul>
+				<li>Implantando sistema novo</li>
+				<li>Implantando Link Embratel</li>
+				<li>Em breve novos serviços</li>					
+				</ul>
+		</div>
+			
+		<div id="main_full">	
+			
+		<h1>Nunca Passe sua Senha a Estranhos!</h1>
+<br>
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">  
+<p>Usuário $(username)</p>
+<p>Endereco de MAC $(mac)</p>
+<p>Tempo da Sessão: $(uptime)</p>
+<p>$(if session-time-left)Tempo restante: $(session-time-left)
+<p>$(endif)
+<p>bytes enviados/recebidos: $(bytes-in-nice) / $(bytes-out-nice)</p>
+
+<p><input type="submit" value="Conectar novamente"></p>
+</form>
+      				
+		</div>	
+
+			
+	<!-- content-wrap ends here -->		
+	</div>
+
+<!-- footer starts here -->	
+<div id="footer">
+	
+	
+ <div class="footer-left"> 
+      <p class="align-left"> &copy; 2007 <strong> Rony Net</strong> | Conectando você, ao mundo...</p>		
+	</div>
+	
+	
+</div>
+<!-- footer ends here -->
+	
+<!-- wrap ends here -->
+</body>
+</html>

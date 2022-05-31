@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Configurar Mikrotik Wireless - Mis Productos</title>
+<link href="estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+<div id="geral">
+
+<div id="topo">
+
+<div id="logo">
+	<a href="login.html"><img src="images/logoCmw2.png" alt="Logo" width="107" height="85" longdesc="Wireless" /></a></div>
+
+<div id="fone"><img src="images/LogoFacebook.png" alt="Redes" width="171" height="54" longdesc="Sociales" /></div>
+
+</div>
+
+<div id="conteudo">
+
+<div id="menu">
+
+	<ul>
+    	<li><a href="login.html">Principal</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contactenos.html">Contáctenos</a></li>
+    </ul>
+
+</div>
+
+<div id="banner"><img src="images/banner3.png" alt="Banner" width="800" height="200" longdesc="Negocios" /></div>
+
+<div id="esq">
+$(if error)<br /><div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)
+<h1><span class="azul">ACTIVA TU PIN </span> AQUÍ.</h1>
+<p>
+<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+      	<input type="hidden" name="dst" value="$(link-orig)">	
+      	<input type="hidden" name="popup" value="true">
+				<p>				
+				<label>Usuario:</label>
+				<input name="username" value="$(username)" type="text" size="17" />
+				<label>Contraseña:</label>
+				<input name="password" value="" type="password" size="17" />
+				</p><br />				
+        		<p class="align-center">	
+				<input class="button" type="submit" value="&lt;&lt;&lt; Acceder &gt;&gt;&gt;"/>		
+				</p><br />
+      </form>		
+</p>
+</div>	
+<div id="dir"> 
+<h1 align="center">MIS PRODUCTOS</h1>
+<p align="center">&nbsp;</p>
+<p align="center"><span class="azul"><strong>12 HORAS</strong></span> <strong>...................... $ 2.000</strong></p>
+<p align="center">&nbsp;</p>
+<p align="center"><strong class="azul">1 PIN / UN MES</strong> <strong>................. $ 20.000</strong></p>
+<p align="center">&nbsp;</p>
+<p align="center"><strong class="azul">2 PINES / UN MES</strong><strong>.............. $ 30.000</strong></p>
+<p align="center">&nbsp;</p>
+<p align="center"><strong class="azul">3 PINES / UN MES</strong><strong>.............. $ 39.000</strong></p>  
+<p>&nbsp;</p>
+</div>
+
+</div>
+<div id="clear"></div>
+<div id="fundo">
+	<p>&copy; 2011 ConfigurarMikrotikWireless - Todos los derechos reservados.</p>
+</div>
+
+</div>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>HotSpot &gt; Status</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<style type="text/css">
+<!--
+textarea,input,select {
+	background-color: #FDFBFB;
+	border: 1px #BBBBBB solid;
+	padding: 2px;
+	margin: 1px;
+	font-size: 14px;
+	color: #808080;
+}
+
+.tabula{
+ 
+border-width: 1px; 
+border-collapse: collapse; 
+border-color: #c1c1c1; 
+background-color: transparent;
+font-family: verdana;
+font-size: 11px;
+}
+
+body{ color: #737373; font-size: 12px; font-family: verdana; }
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 12px; }
+a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+img {border: none;}
+td { font-size: 12px; padding: 4px;}
+
+-->
+</style>
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=508,height=332');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</head>
+<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+<table width="100%" height="100%">
+
+<tr>
+<td align="center" valign="middle">
+<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+        <table width="501" height="332" border="3" align="center" bordercolor="#000000" bgcolor="#FFFFFF">
+          <tr> 
+            <td width="487" height="308" bgcolor="#000000"> <table width="100%" height="324" border="0" cellpadding="3" cellspacing="3" background="http://www.superserver.net/img/fundos.jpg">
+                <tr> 
+                  <td width="24%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="77%" height="30"><font color="#FFFFFF" size="5" face="Verdana, Arial, Helvetica, sans-serif"><strong> 
+                          <font color="#000000">--</font>Aviso:</strong></font></td>
+                        <td width="23%">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2"><font color="#FFFF00" size="4" face="Arial, Helvetica, sans-serif"><strong><br>
+                          <font size="3" face="Verdana, Arial, Helvetica, sans-serif">Estimado</font><font size="3" face="Verdana, Arial, Helvetica, sans-serif"> 
+                          Sr. (a) <span class="style2"><font color="#FF0000">$(username)</font></span> 
+                          se encuentra en nuestro sistema en mora, favor acercarse a pagar o pongase en contacto  con el departamente de cobranza para que regularice su pago, de lo contrario su enlace bloquer&aacute; en cualquier momento </font> 
+                          <font size="3"><br>
+                          <br>
+                          </font> </strong></font></td>
+                      </tr>
+                      <tr> 
+                        <td colspan="2"><div align="center"><font color="#FFFFFF" size="3" face="Verdana, Arial, Helvetica, sans-serif">Favor 
+                            desconsiderar este mensaje en caso de que su pago ya fue efectuado.<br>
+                            <br>
+                            </font></div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+      </form>
+</td>
+</table>
+</body>
+</html>
